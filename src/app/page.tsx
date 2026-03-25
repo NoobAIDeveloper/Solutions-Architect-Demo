@@ -40,9 +40,11 @@ const INDUSTRY_PLACEHOLDERS: Record<string, string> = {
 };
 
 export default function Home() {
-  const [industry, setIndustry] = useState("");
+  const [industry, setIndustry] = useState("Banking & Financial Services");
   const [customIndustry, setCustomIndustry] = useState("");
-  const [problem, setProblem] = useState("");
+  const [problem, setProblem] = useState(
+    "Reduce customer support load and improve response time"
+  );
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -98,14 +100,13 @@ export default function Home() {
 
   return (
     <main className="flex-1 w-full max-w-3xl mx-auto px-6 py-12">
-      <header className="mb-10">
+      <header className="mb-10 text-center">
         <h1 className="text-3xl font-bold tracking-tight">
           AI Solutions Architect
         </h1>
         <p className="mt-2 text-[var(--foreground)]/60 text-base">
-          Describe your industry and business problem. Get a structured AI
-          solution proposal including use cases, architecture, sample prompts, and
-          business impact.
+          Simulates how a Solutions Engineer maps business problems to AI
+          solutions using OpenAI
         </p>
       </header>
 
@@ -184,6 +185,10 @@ export default function Home() {
 
       {output && (
         <section ref={outputRef} className="mt-12">
+          <p className="text-sm text-[var(--foreground)]/50 mb-4">
+            Based on your problem, here&apos;s how I would approach this as a
+            Solutions Engineer.
+          </p>
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-semibold">Solution Proposal</h2>
             <button
