@@ -104,7 +104,7 @@ export default function Home() {
         </h1>
         <p className="mt-2 text-[var(--foreground)]/60 text-base">
           Describe your industry and business problem. Get a structured AI
-          solution proposal — use cases, architecture, sample prompts, and
+          solution proposal including use cases, architecture, sample prompts, and
           business impact.
         </p>
       </header>
